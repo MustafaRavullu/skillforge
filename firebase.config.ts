@@ -1,12 +1,12 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 const firebaseConfig = {
-  apiKey: "AIzaSyBi541hAaU60ioezF8nvRLWqJ1tuVQ2v-0",
-  authDomain: "skillforge-eb08a.firebaseapp.com",
-  projectId: "skillforge-eb08a",
-  storageBucket: "skillforge-eb08a.appspot.com",
-  messagingSenderId: "592989984171",
-  appId: "1:592989984171:web:2ff7a0ddf5ec58ad932eee",
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
 };
 const app = initializeApp(firebaseConfig);
 export const db = getFirestore(app);
